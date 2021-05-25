@@ -1,0 +1,25 @@
+[
+  {
+    "name": "Меню",
+    "isTitle": true
+  },
+  {
+    "name": "Персональный свод",
+    "url": "index.html",
+    "icon": "home"
+  },
+  
+  {
+    "name": "Общий свод",
+    "url": "table-datatable.html",
+    "icon": "file-plus"
+  },
+
+  {
+    "name": "Проекты",
+    "url": "projects.html",
+    "icon": "file-plus"
+  }
+  
+]
+  

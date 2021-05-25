@@ -1,0 +1,167 @@
+{% set title = 'Проекты' %}
+{% set filename = 'projects.html' %}
+
+{% extends 'layouts/master.html' %}
+{% block content %}
+<div class="main-content container-fluid">
+    
+    <div class="page-title">
+        
+        <h3>Укрепление общественного здоровья в Приморском крае</h3>
+        <p class="text-subtitle text-muted">Министерство здравоохранения Приморского края</p>
+        <p class="text-title text-muted">Региональный проект</p>
+    </div>
+    <section class="section">
+
+        <div class="row mb-2">
+            <div class="col-12 col-md-3">
+                <div class="card card-statistic">
+                    <div class="card-body p-0">
+                        <div class="d-flex flex-column">
+                            <div class='px-3 py-3 d-flex justify-content-between'>
+                                <h3 class='card-title'>Сводный рейтинг</h3>
+                                <div class="card-right d-flex align-items-center">
+                                    <p> 70% </p>
+                                </div>
+                            </div>
+                            <div class="chart-wrapper">
+                                <canvas id="canvas1" style="height:100px !important"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="card card-statistic">
+                    <div class="card-body p-0">
+                        <div class="d-flex flex-column">
+                            <div class='px-3 py-3 d-flex justify-content-between'>
+                                <h3 class='card-title'>Показатели</h3>
+                                <div class="card-right d-flex align-items-center">
+                                    <p> 16 </p>
+                                </div>
+                            </div>
+                            <div class="chart-wrapper">
+                                <canvas id="canvas2" style="height:100px !important"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="card card-statistic">
+                    <div class="card-body p-0">
+                        <div class="d-flex flex-column">
+                            <div class='px-3 py-3 d-flex justify-content-between'>
+                                <h3 class='card-title'>Бюджет</h3>
+                                <div class="card-right d-flex align-items-center">
+                                    <p>100% </p>
+                                </div>
+                            </div>
+                            <div class="chart-wrapper">
+                                <canvas id="canvas3" style="height:100px !important"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="card card-statistic">
+                    <div class="card-body p-0">
+                        <div class="d-flex flex-column">
+                            <div class='px-3 py-3 d-flex justify-content-between'>
+                                <h3 class='card-title'>КТ/Мероприятия</h3>
+                                <div class="card-right d-flex align-items-center">
+                                    <p>25 </p>
+                                </div>
+                            </div>
+                            <div class="chart-wrapper">
+                                <canvas id="canvas4" style="height:100px !important"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col-md-8">
+               
+                </div>
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h4 class="card-title">Участники</h4>
+                        <div class="d-flex ">
+                            <i data-feather="download"></i>
+                        </div>
+                    </div>
+                    <div class="card-body px-0 pb-0">
+                        <div class="table-responsive">
+                            <table class='table mb-0' id="table1">
+                                <thead>
+                                    <tr>
+                                        <th>ФИО</th>
+                                        <th>Должность</th>
+                                        <th>Подразделение</th>
+                                        <th>Роль</th>
+                                        <th>Премирование</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Афанасьева Ольга Андреевна</td>
+                                        <td>Заместитель министра</td>
+                                        <td>Министерство здравоохранения Приморского края</td>
+                                        <td>Руководитель проекта</td>
+                                        <td>
+                                            <span class="badge bg-success">Подлежит</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Бардовский Алексей Викторович</td>
+                                        <td>Заместитель министра</td>
+                                        <td>Министерство здравоохранения Приморского края</td>
+                                        <td>Куратор проекта</td>
+                                        <td>
+                                            <span class="badge bg-danger">Не подлежит</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ибрагимова Елена Марлисовна</td>
+                                        <td>Начальник отдела организации медицинской помощи женщинам и детям</td>
+                                        <td>Министерство здравоохранения Приморского края</td>
+                                        <td>Исполнитель</td>
+                                        <td>
+                                            <span class="badge bg-success">Подлежит</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                       
+                                    </tr>
+                                    <tr>
+                                        
+                                    </tr>
+                                    <tr>
+                                       
+                                    </tr>
+                                    <tr>
+                                       
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+    </section>
+</div>
+{% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="assets/vendors/chartjs/Chart.min.css">
+{% endblock %}
+{% block js %}
+    <script src="assets/vendors/chartjs/Chart.min.js"></script>
+    <script src="assets/vendors/apexcharts/apexcharts.min.js"></script>
+    <script src="assets/js/pages/dashboard.js"></script>
+{% endblock %}
